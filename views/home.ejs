@@ -1,0 +1,28 @@
+<Html>
+    <head>
+        <title>
+            <%= title %> 
+        </title>
+
+    </head>
+    <body>
+        <h1 style="text-align: center;" >This is Home page!</h1>
+       <div>
+        <ul>
+            <% for(let i of contact_list) {%> 
+                <li>
+                    <p><%= i.name %></p>
+                    <p><%= i.phone %></p>
+                </li>
+            <% } %>
+        </ul>
+       </div>
+
+       <form action="/action" method = "POST" >
+        <input type="text" name="name" placeholder="Enter name" required>
+        <input type="number" name="phone" placeholder="Enter phone" required>
+        <button type="submit">Add contact</button>
+       </form>
+       
+    </body>
+</Html>
